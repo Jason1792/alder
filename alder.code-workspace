@@ -1,0 +1,14 @@
+{
+	"folders": [
+                {
+                        "path": "."
+                },
+                {
+                        "path": "../../shared_web"
+                },
+                {
+                        "path": "../alder_old"
+                }
+        ],
+        "settings": {}
+}

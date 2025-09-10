@@ -1,0 +1,95 @@
+.modal-overlay { 
+        /* modal-overlay is the layer that's between the normal card view and the modal-content that contains larger image. Since in your current plan the modal-content takes up the whole screen, modal-overlay is entirely hidden. Consider removing this when all is settled. */
+        position: fixed; 
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: var(--modal-overlay-bgc);
+        display: block;
+        z-index: 1000;
+}
+.modal-nav-and-text {
+        background-color: var(--modal-nav-and-text);
+        height: fit-content;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 0; 
+        margin: 50px;
+        padding: 20px;
+        box-sizing: border-box;
+        border-radius: 6px;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.modal-nav-and-text {
+        opacity: 1;
+}
+}
+@media (max-width: 600px) {
+.modal-nav-and-text {
+        opacity: 1;
+}
+}
+.modal-nav {
+        background-color: var(--modal-nav);
+        height: 40px;
+        display: block;
+        padding: 0;
+        box-sizing: border-box;
+        border-radius: 6px;
+        flex: 1 1 10%;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.modal-nav {
+        opacity: 1;
+}
+}
+@media (max-width: 600px) {
+.modal-nav {
+        opacity: 1;
+        margin-left: 15px;
+        gap:15%;
+        flex: 1 1 15%;
+}
+}
+.modal-close { /* e: div */
+        background-color: var(--modal-close);
+        height: 100%;
+        padding: 0;
+        box-sizing: border-box;
+        border-radius: 6px;
+}
+.modal-nav-button { /* e: button */
+        height: 100%;
+        padding: 0;
+        font-weight: bold;
+        background-color: var(--modal-nav-button-bg);
+        color: rgb(204,204,204);
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+}
+.modal-close-icon, .modal-back-icon, .modal-forward-icon { /* e: img */
+        opacity: 35%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        transition-duration: .7s;
+}
+.modal-close-icon:hover, .modal-back-icon:hover, .modal-forward-icon:hover { /* e: img */
+        opacity: 65%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        transition-duration: .7s;
+}
+.modal-text {
+        background-color: var(--modal-text);
+        padding: 4px 0 0 10px;
+        border-radius: 6px;
+        flex: 1 1 90%;
+}
+
+

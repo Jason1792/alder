@@ -1,0 +1,803 @@
+/* #region PADDING_AT_TOP_AND_TEXT_SWITCHING_PER_SCREEN_SIZE */       
+
+/*     */
+
+
+hero { 
+        z-index: 998;
+        padding-top:64px; 
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+hero { 
+        z-index: 998;
+        padding-top: 56px; 
+}
+}
+@media (max-width: 600px) {
+hero { 
+        z-index: 998;
+        padding-top: 44px; 
+}
+}
+/* 
+h1 span {
+        display: none;
+}
+h1::after {
+        content: "DESKTOP";
+}
+
+@media (max-width: 1024px) {
+h1::after {
+        content: "TABLET";
+}
+}
+
+@media (max-width: 600px) {
+h1::after {
+content: "CELL";
+}
+}
+*/
+/* #endregion HUGE_PADDING_AT_TOP_AND_TEXT_SWITCHING_PER_SCREEN_SIZE */       
+
+/* #region BUTTONS & ANCHORS */       
+.button-style {
+        z-index: 998;
+        display: block;
+        background-color: var(--button); 
+        padding: 10px 0rem;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        text-align: center;
+        box-sizing: border-box;
+        transition: background-color .4s ease;
+}
+.button-style:hover, .button-style:focus {
+  background-color: var(--button-hover);
+}
+/* Optional: make <button> elements behave visually the same */
+button.button-style {
+  appearance: none;
+  -webkit-appearance: none;
+}
+/* #endregion BUTTONS & ANCHORS */       
+
+/* #region COLORS */      
+:root, :root[data-theme='actual'] {
+        --body-text: rgba(var(--alder_2_alpha),.85);
+        --h2: rgba(var(--alder_2_alpha),.01);
+        --h3: rgba(var(--alder_2_alpha),.01);
+        --h4: rgba(var(--alder_2_alpha),.9);
+        --button: rgba(var(--alder_1_alpha),1);
+        --button-hover: rgba(var(--alder_2_alpha),1);
+        --border: rgb(170,170,170);
+        --inner-default: white;
+        --header-outer: 
+                linear-gradient(
+                rgba(var(--alder_2_alpha),.2),
+                rgba(var(--alder_2_alpha),.2)), 
+                rgb(63, 63, 63);
+        --header-inner: none;
+        --text-highlight-alder: rgba(var(--alder_1_alpha),1);
+        --text-highlight-advisory: rgba(255,255,255,.75);
+        --text-highlight-llc: rgba(255,255,255,.5);
+        --header-buttons: none;
+        --hero-outer: rgba(var(--alder_2_alpha),.6);
+        --hero-text-and-buttons: none;
+        --hero-text: none;
+        --hero-buttons: none;
+        --button-wrapper: none;
+        --hero-image: none;
+        --case-studies-outer: rgba(var(--alder_2_alpha),.45);
+        --case-studies-inner: white;
+        --case-studies-grid: none;
+        --case-study-card-bg: none;
+        --case-study-card-text-bg: none;
+        --modal-overlay-bg:
+                linear-gradient(
+                rgba(var(--alder_2_alpha),.6),
+                rgba(var(--alder_2_alpha),.6)), 
+                rgb(61, 61, 61);
+        --modal-overlay-bgc: rgba(66,66,66,.95);
+        --modal-content: rgba(25, 25, 25, 0.94);
+        --modal-image-container: rgba(255, 255, 255, 0);
+        --modal-nav-and-text: rgb(255, 255, 255);
+        --modal-nav: rgba(255, 255, 255, 0);
+        --modal-nav-button-bg: none;  
+        --modal-back-and-forward: rgba(255, 255, 255, 0);
+        --modal-close: rgba(255, 255, 255, 0);
+        --modal-text: rgba(255, 255, 255, 0);
+        --about-outer: rgba(var(--alder_2_alpha),.3);
+        --about-title-and-buttons-cont: none;
+        --about-buttons: none;
+        --about-btn-wrap: none;
+        --footer: rgba(var(--alder_2_alpha),.6);
+        --footer-tablet: none;
+        --footer-left: none;
+}
+:root[data-theme='test'] {
+        --button: brown;
+        --border: none;
+        --inner-default: yellow;
+        --header-outer: lightgreen;
+        --header-inner: rgb(70, 138, 110);
+        --text-highlight-alder: green;
+        --text-highlight-advisory: orange;
+        --text-highlight-llc: black;
+        --header-buttons: coral;
+        --hero-outer: lightblue;
+        --hero-text-and-buttons: forestgreen;
+        --hero-text: hotpink;
+        --hero-buttons: orange;
+        --button-wrapper: white;
+        --hero-image: white;
+        --case-studies-outer: lightgreen;
+        --case-studies-inner: white;
+        --case-studies-grid: blue;
+        --case-study-card-bg: green;
+        --case-study-card-text-bg: black;
+        --modal-overlay: rgba(157, 216, 118, 0.97);
+        --modal-content: rgba(173, 24, 24, 0.94);
+        --modal-image-container: rgba(40, 88, 110, 0.837);
+        --modal-nav-and-text: rgb(228, 175, 53);
+        --modal-nav: rgba(151, 99, 157, 0.833);
+        --modal-nav-button-bg: pink;  
+        --modal-back-and-forward: rgba(255, 255, 255, 0);
+        --modal-close: rgba(38, 100, 209, 0.866);
+        --modal-text: rgba(140, 4, 4, 0.85);
+        --about-outer: black;
+        --about-title-and-buttons-cont: gold;
+        --about-buttons: rgb(93, 190, 93);
+        --about-btn-wrap: magenta;
+        --footer: blue;
+        --footer-left: salmon;
+}
+:root { /* CHANGE THESE ONLY FROM MASTER BRANDING */
+  --alder_1: rgb(213,189,48);
+  --alder_1_alpha: 213,189,48;
+  --alder_2: rgb(83,78,53);
+  --alder_2_alpha: 83,78,53;
+  --alder_3: rgb(84,151,185);
+  --alder_3_alpha: 84,151,185;
+  --alder_4: rgb(87,122,65);
+  --alder_4_alpha: 87,122,65;
+  --alder_5: rgb(215,170,190);
+  --alder_5_alpha: 215,170,190;
+  }
+/* #endregion COLORS */       
+
+/* #region TEXT */       
+/* #region TEXT - HTML, ROOT, BODY */
+html { /* this cascades to 'body' - don't delete */
+        font-size: 16px;
+}
+:root {
+        --font-heading: "Oswald", sans-serif;
+        --font-body: "Lato", sans-serif;
+        --weight-light: 300;
+        --weight-regular: 400;
+        --weight-medium: 500;
+        --weight-semi-bold: 600;
+        --weight-bold: 700;
+}
+body { /* 'html body', not like body/normal font */
+        z-index: 998;
+        font-family: var(--font-body);
+        font-weight: var(--weight-light);
+        line-height: 1.6;
+        font-size: 1rem;
+        color: var(--body-text);
+        margin: 0;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+body { 
+        z-index: 998;
+}
+}
+@media (max-width: 600px) {
+body { 
+        z-index: 998;
+}
+}
+/* #endregion TEXT - HTML, ROOT, BODY*/       
+/* #region TEXT - HEADINGS */
+h1 {
+        z-index: 998;
+        font-family: var(--font-heading);
+        font-weight: var(--weight-bold);
+        font-size: 2rem;
+        line-height: 1.25;
+        margin: 0;
+}
+/* #region TEXT - HEADINGS - h1 */       
+
+@media (min-width: 601px) and (max-width: 1024px) {
+h1 {
+        z-index: 998;
+}
+}
+@media (max-width: 600px) {
+h1 {
+        z-index: 998;
+}
+}
+header h1 {
+        z-index: 998;
+        color: var(--alder_2);
+        font-family: var(--font-heading);
+        font-weight: var(--weight-bold);
+        font-size: 3rem;
+        line-height: 1;
+        margin: -.25rem 0rem 0rem 0rem;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+header h1 {
+        z-index: 998; /*
+        font-size: 2.5rem;
+        line-height: 1;
+        margin: -.2rem 0rem 0rem 0rem; */
+}
+}
+@media (max-width: 600px) {
+header h1 {
+        z-index: 998; /*
+        font-size: 2rem;
+        line-height: 1; */
+}
+}
+.text-highlight-alder {
+        color: var(--text-highlight-alder);
+}
+.text-highlight-advisory {
+        color: var(--text-highlight-advisory);
+}
+.text-highlight-llc {
+        color: var(--text-highlight-llc);
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.text-highlight-llc {
+        z-index: 998;
+}
+.app.scrolled .text-highlight-llc {
+        z-index: 998;
+        display: none;
+}
+}
+@media (max-width: 600px) {
+.text-highlight-llc {
+        z-index: 998;
+}
+.app.scrolled .text-highlight-llc {
+        z-index: 998;
+        display: none;
+}
+}
+/* #endregion TEXT - HEADINGS - h1 */       
+h2 {
+        z-index: 998;
+        font-family: var(--font-heading);
+        font-weight: var(--weight-semi-bold);
+        font-size: 1.75rem;
+        line-height: 1.25;
+        margin: 0rem 0rem .5rem 0rem;
+}
+/* #region TEXT - HEADINGS - h2 */       
+@media (min-width: 601px) and (max-width: 1024px) {
+h2 {
+        z-index: 998;
+}
+}
+@media (max-width: 600px) {
+h2 {
+        z-index: 998;
+}
+}
+.hero-text h2 {
+        font-size: 2.25rem;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.hero-text h2 {
+        opacity: 1;
+}
+}
+@media (max-width: 600px) {
+.hero-text h2 {
+        opacity: 1;
+}
+}
+#vrd {
+        opacity: 1;
+        margin-top: -.25rem;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+#vrd {
+        opacity: 1;
+}
+}
+@media (max-width: 600px) {
+#vrd {
+        opacity: 1;
+}
+}
+#fnp {
+        opacity: 1;
+        margin-top: -.25rem;
+        margin-bottom: 1.5rem;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+#fnp {
+        opacity: 1;
+}
+}
+@media (max-width: 600px) {
+#fnp {
+        opacity: 1;
+}
+}
+/* #endregion TEXT - HEADINGS - h2 */       
+h3 {
+        z-index: 998;
+        font-family: var(--font-heading);
+        font-weight: var(--weight-semi-bold);
+        font-size: 1.5rem;
+        line-height: 1.25;
+        margin: 0rem 0rem .5rem 0rem;
+}
+/* #region TEXT - HEADINGS - h3 */       
+@media (min-width: 601px) and (max-width: 1024px) {
+h3 {
+        z-index: 998;
+}
+}
+@media (max-width: 600px) {
+h3 {
+        z-index: 998;
+        margin: 0;
+}
+}
+/* #endregion TEXT - HEADINGS - h3 */       
+h4 {
+        z-index: 998;
+        font-family: var(--font-heading);
+        font-weight: var(--weight-semi-bold);
+        font-size: 1.25rem;
+        line-height: 1.25;
+        margin: 0rem 0rem .5rem 0rem;
+}
+/* #region TEXT - HEADINGS - h4 */       
+@media (min-width: 601px) and (max-width: 1024px) {
+h4 {
+        z-index: 998;
+}
+}
+@media (max-width: 600px) {
+h4 {
+        z-index: 998;
+}
+}
+/* #endregion TEXT - HEADINGS - h4 */       
+/* #endregion TEXT - HEADINGS */       
+/* #region TEXT - PARA & LISTS */       
+p {
+        z-index: 998;
+        font-size: 1rem;
+        line-height: 1.5;
+        margin: 0rem 0rem 1.5rem 0rem;
+}
+/* #region TEXT - PARA & LISTS */       
+@media (min-width: 601px) and (max-width: 1024px) {
+p {
+        z-index: 998;
+}
+}
+@media (max-width: 600px) {
+p {
+        z-index: 998;
+}
+}
+.hero-inner p {
+        font-size: 1.375rem;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.hero-inner p {
+        z-index: 998;
+}
+}
+@media (max-width: 600px) {
+.hero-inner p {
+        z-index: 998;
+}
+}
+.p-small {
+        z-index: 998;
+        font-size: .75rem;
+        margin: 0rem 0rem 1rem 0rem;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.p-small {
+        opacity: 1;
+}
+}
+@media (max-width: 600px) {
+.p-small {
+        opacity: 1;
+}
+}
+
+
+
+ul {
+        opacity: 1;
+        margin-top: .5rem;
+        margin-bottom: 2rem;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+ul {
+        opacity: 1;
+}
+}
+@media (max-width: 600px) {
+ul {
+        opacity: 1;
+}
+}
+/* #endregion TEXT - PARA & LISTS - p */       
+
+/* #endregion TEXT - PARA & LISTS */       
+/* #region TEXT - BUTTON */       
+.button-text {
+        z-index: 998;
+        font-family: var(--font-body);
+        font-weight: var(--weight-medium);
+        font-size: 1rem;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-decoration: none;
+        color: white;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.button-text {
+        z-index: 998;
+}
+}
+@media (max-width: 600px) {
+.button-text {
+        z-index: 998;
+        font-size: 0.875rem;
+}
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.header-inner .button-text {
+        opacity: 1;
+}
+}
+@media (max-width: 600px) {
+.header-inner .button-text {
+        font-size: .75rem;
+}
+}
+/* #endregion TEXT - BUTTON */       
+/* #region TEXT - CASE STUDY CARDS */       
+.card-field_02 {
+        opacity: 1;
+        font-size: 1.25rem;
+        margin-top: 0;    
+        margin-bottom: 0;
+        line-height: 1.5rem;    
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.card-field_02 {
+        opacity: 1; 
+}
+}
+@media (max-width: 600px) {
+.card-field_02 {
+        opacity: 1;
+}
+}
+.card-field_03 {
+        font-size: 1rem;
+        margin-top: 4px;    
+        margin-bottom: 0;
+        line-height: 1.25rem;    
+} 
+@media (min-width: 601px) and (max-width: 1024px) {
+.card-field_03 {
+        opacity: 1;
+}
+}
+@media (max-width: 600px) {
+.card-field_03 {
+        opacity: 1; 
+}
+}
+.card-field_04 {
+        display: none;
+        font-size: 1.0rem;
+        margin-top: 0;    
+        margin-bottom: 8px;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.card-field_04 {
+        opacity: 1;  
+}
+}
+@media (max-width: 600px) {
+.card-field_04 {
+        opacity: 1;
+}
+}
+.card-field_05 {
+        display: none;
+        font-size: 1.0rem;
+        margin-top: 0;    
+        margin-bottom: 8px;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.card-field_05 {
+        opacity: 1;
+}
+}
+@media (max-width: 600px) {
+.card-field_05 {
+        opacity: 1;
+}
+}
+.card-field_06 {
+        display: none;
+        font-size: 1.0rem;
+        margin-top: 0;    
+        margin-bottom: 8px;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.card-field_06 {
+        opacity: 1;
+}
+}
+@media (max-width: 600px) {
+.card-field_06 {
+        opacity: 1;
+}
+}
+.card-field_07 {
+        display: none;
+        font-size: 1.0rem;
+        margin-top: 0;    
+        margin-bottom: 8px;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.card-field_07 {
+        opacity: 1;
+}
+}
+@media (max-width: 600px) {
+.card-field_07 {
+        opacity: 1; 
+}
+}
+/* #endregion TEXT - CASE STUDY CARDS */       
+/* #region TEXT - CASE STUDY MODALS */       
+.modal-field_02 {
+        font-size: 3rem;
+        margin-top: .5rem;    
+        margin-bottom: 3rem;
+        line-height: 1rem;    
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.modal-field_02 {
+        opacity: 1;
+}
+}
+@media (max-width: 600px) {
+.modal-field_02 {
+        opacity: 1;
+}
+}
+.modal-field_03 {
+        font-size: 2rem;
+        margin-top: .5rem;    
+        margin-bottom: 2rem;
+        line-height: 1rem;    
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.modal-field_03 {
+        opacity: 1;
+}
+}
+@media (max-width: 600px) {
+.modal-field_03 {
+        opacity: 1;
+}
+}
+.modal-field_04 {
+        font-size: 1.5rem;
+        margin-top: .5rem;    
+        margin-bottom: 2rem;
+        line-height: 1rem;    
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.modal-field_04 {
+        opacity: 1;
+}
+}
+@media (max-width: 600px) {
+.modal-field_04 {
+        opacity: 1;
+}
+}
+.modal-field_05 {  
+        font-size: 1.5rem;
+        margin-top: .5rem;    
+        margin-bottom: 2rem;
+        line-height: 1rem;    
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.modal-field_05 {  
+        opacity: 1;
+}
+}
+@media (max-width: 600px) {
+.modal-field_05 {  
+        opacity: 1;
+}
+}
+.modal-field_06 {
+        font-size: 1.5rem;
+        margin-top: .5rem;    
+        margin-bottom: 2rem;
+        line-height: 1rem;    
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.modal-field_06 {
+        opacity: 1;
+}
+}
+@media (max-width: 600px) {
+.modal-field_06 {
+        opacity: 1;
+}
+}
+.modal-field_07 {
+        font-size: 1.5rem;
+        margin-top: .5rem;    
+        margin-bottom: 2rem;
+        line-height: 1rem;    
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.modal-field_07 {
+        opacity: 1;
+}
+}
+@media (max-width: 600px) {
+.modal-field_07 {
+        opacity: 1;
+}
+}
+/* #endregion TEXT - CASE STUDY MODALS */       
+/* #endregion TEXT */       
+
+/* #region OUTER_AND_INNER_DEFAULTS */   
+section, footer {
+        z-index: 998;
+        margin: 0;
+        padding: 12px;
+        border: none;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+section, footer {
+        z-index: 998;
+}
+}
+@media (max-width: 600px) {
+section {
+        z-index: 998;
+        padding: 7px 0;
+}
+footer {
+        opacity: 1;
+        padding: 7px 0 0 0;
+}
+}
+.inner {
+        z-index: 998;
+        background: var(--inner-default);
+        border: none;
+        border-radius: .3rem;
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+        box-sizing: border-box;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.inner {
+        z-index: 998;
+}
+}
+@media (max-width: 600px) {
+.inner {
+        z-index: 998;
+        border-radius: 0;
+}
+}
+/* #endregion OUTER_AND_INNER_DEFAULTS */       
+
+/* #region OTHER_NON_COMPONENT_STYLES */     
+.case-studies-outer {
+        z-index: 998;
+        background-color: var(--case-studies-outer); 
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.case-studies-outer {
+        z-index: 998;
+}
+}
+@media (max-width: 600px) {
+.case-studies-outer {
+        z-index: 998;
+}
+}
+.case-studies-inner {
+        z-index: 998;
+        margin: 0 auto;
+        padding: 16px;
+        display: block;
+        box-sizing: border-box;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.case-studies-inner {
+        z-index: 998;
+}
+}
+@media (max-width: 600px) {
+.case-studies-inner {
+        z-index: 998;
+        padding: .8rem;
+}
+}        
+/* #endregion OTHER_NON_COMPONENT_STYLES */       
+
+/* #region SOCIAL_ICONS */       
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.social-icon svg {
+  width: 24px;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  transition: fill 0.3s ease;
+}
+.social-icon:hover svg {
+  fill: #1a252f;
+}
+.social-icon img {
+  width: 34px;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  transition: fill 0.3s ease;
+}
+.social-icon:hover img {
+  fill: #1a252f;
+}
+/* #endregion SOCIAL_ICONS */       
+
+/* #region KEEP AT END */       
+
+body:not(.scrolled) .header-buttons {
+  opacity: 0;
+}
+.app.scrolled .header-buttons {
+  opacity: 1;
+}
+/* transition can stay on the base class */
+.header-buttons {
+  transition: opacity 0.4s ease;
+}
+
+/* #endregion _____C_O_P_Y___M_E_____ */    

@@ -1,0 +1,145 @@
+.hero-outer {
+        z-index: 998;
+        background-color: var(--hero-outer); 
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.hero-outer {
+        z-index: 998;
+}
+}
+@media (max-width: 600px) {
+.hero-outer {
+        z-index: 998;
+        padding-top: 0;
+}
+}
+.hero-inner {
+        z-index: 998;
+        background-color: var(--inner-default);
+        margin: 0 auto;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        gap: 0;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.hero-inner {
+        z-index: 998;
+}
+}
+@media (max-width: 600px) {
+.hero-inner {
+        z-index: 998;
+        display: block;
+        width: 100%;
+        border-radius: 0;
+}
+}
+.hero-image {
+        z-index: 998;
+        background-color: var(--hero-image); 
+        display: inline-block;
+        flex: 1 1 33.3%;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.hero-image {
+        z-index: 998;/*
+        flex: 1 1 50%;  THIS */
+}
+}
+@media (max-width: 600px) {
+.hero-image {
+        display: none;
+}
+}
+.hero-image img {
+        z-index: 998;
+        display: block;
+        max-width: 100%;
+        height: auto;
+        border-radius: .3rem 0 0 .3rem;
+        padding: 0;
+        margin: 0;
+}
+.hero-image-bg {
+        display: none;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.hero-image-bg {
+        z-index: 998;
+}
+}
+@media (max-width: 600px) {
+.hero-image-bg {
+        z-index: 998;
+        background-image: url(assets/202304-Alaska-0849.jpg); 
+        flex: none;
+        display: block;
+        height: 35vw;
+        background-position: calc(50% + 15px) calc(50% + 15px);
+        background-size: 108%;
+}
+}
+.hero-text-and-buttons {
+        z-index: 998;
+        flex: 1 1 66%;
+        padding: 1rem;
+        background-color: var(--hero-text-and-buttons); 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.hero-text-and-buttons {
+        z-index: 998;
+}
+}
+@media (max-width: 600px) {
+.hero-text-and-buttons {
+        z-index: 998;
+        padding: .8rem;
+}
+}
+.hero-text {
+        background-color: var(--hero-text); 
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.hero-text {
+        z-index: 998;
+}
+}
+@media (max-width: 600px) {
+.hero-text {
+        z-index: 998;
+}
+}
+.hero-buttons-cont {
+        z-index: 998;
+        background-color: var(--hero-buttons); 
+        width: 100%;
+        padding: 0;
+        box-sizing: border-box;
+        border-radius: 0rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: .8rem;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.hero-buttons-cont {
+        z-index: 998;
+}
+}
+@media (max-width: 600px) {
+.hero-buttons-cont {
+        z-index: 998;
+}
+}
+.button-wrapper {
+  background-color: var(--button-wrapper); 
+  flex: 1;
+}

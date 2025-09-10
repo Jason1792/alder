@@ -1,0 +1,141 @@
+header {
+        z-index: 999;
+        background: var(--header-outer); 
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 4px 12px;
+        border: none;
+        position: sticky;
+} 
+
+/* 
+add these back into header above
+        position: fixed;
+        width: 100%; 
+*/
+
+@media (min-width: 601px) and (max-width: 1024px) {
+header {
+        z-index: 999;
+}
+}
+@media (max-width: 600px) {
+header {
+        z-index: 999;
+}
+}
+.header-inner {
+        background-color: var(--header-inner); 
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: .8rem;
+        max-width: 1000px;        
+        margin: 0 auto;
+        padding: .4rem 0;
+        box-sizing: border-box;
+        border-radius: 0;
+        border: 0;
+} 
+@media (min-width: 601px) and (max-width: 1024px) {
+.header-inner {
+        z-index: 998;
+}
+}
+@media (max-width: 600px) {
+.header-inner {
+        z-index: 998;
+        padding: .5rem 0;
+}
+}
+.header-buttons {
+        z-index: 998;
+        background-color: var(--header-buttons); 
+        padding: 0;
+        box-sizing: border-box;
+        border-radius: 0rem;
+        border-top: none;
+        display: none;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: .8rem;
+        flex: 0 0 auto;
+        width: 25vw;
+        margin: .12rem 0 0 0;
+}
+.app.scrolled .header-buttons {
+        opacity: 1;
+        z-index: 999;
+        background-color: var(--header-buttons); 
+        padding: 0;
+        box-sizing: border-box;
+        border-radius: 0rem;
+        border-top: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: .8rem;
+        flex: 0 0 auto;
+        width: 25vw;
+}
+.header-buttons .button-style {
+        padding: .35rem 0 .45rem 0;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.header-buttons {
+        z-index: 999;
+        width: 40vw;
+        display: none;
+        gap: .3rem;
+        margin: 10px 0 0 0;
+}
+.app.scrolled .header-buttons {
+        background-color: var(--header-buttons); 
+        padding: 0;
+        box-sizing: border-box;
+        border-radius: 0rem;
+        border-top: none;
+        width: 40vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex: 0 0 auto;
+        margin: 0;
+}
+.header-buttons .button-style {
+        padding: .35rem 0;
+}
+}
+@media (max-width: 600px) {
+.header-buttons {
+        z-index: 999;
+        display: none;
+}
+.app.scrolled .header-buttons {
+        background-color: var(--header-buttons); 
+        padding: 0;
+        box-sizing: border-box;
+        border-radius: 0rem;
+        border-top: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex: 0 0 auto;
+        width: 30vw;
+        gap: .3rem;
+        margin: .05rem 0 0 0;
+}
+.header-buttons .button-style {
+        padding: .23rem 0;
+}
+.call {
+        display: none;
+        color: red;
+}
+}
