@@ -1,16 +1,6 @@
 import { useState, useMemo } from "react";
 import "./About.css";
 
-/**
- * Accessible multi-open accordion:
- * - Each h3 becomes an accordion header with a button + right-pointing chevron
- * - Clicking toggles its section open/closed (multiple can be open)
- * - Button has aria-expanded + aria-controls; panel has role="region" + aria-labelledby
- * - Expand All / Collapse All controls
- * - Arrow rotates when open (CSS)
- *
- * Uses Bootstrap Icons (chevron-right). No animation on panel height; only icon rotates.
- */
 function About() {
   // Track open panels by id (Set allows multiple open)
   const [openIds, setOpenIds] = useState(new Set());
@@ -54,19 +44,16 @@ function About() {
               We uphold the highest ethical standards, delivering transparent, audit-ready, and regulatory-compliant
               strategies that build long-term trust.
             </p>
-
             <h4>STRATEGIC INNOVATION &amp; INTERNAL OWNERSHIP</h4>
             <p>
               We co-create solutions that are both visionary and pragmatic. By partnering closely with internal teams, we
               foster shared ownership and embed capabilities that enable durable systems change.
             </p>
-
             <h4>TRANSFORMATION WITH PURPOSE</h4>
             <p>
               We help leaders navigate complexity, driving climate resilience and social equity through cross-functional
               strategy and operational alignment.
             </p>
-
             <h4>EQUITY &amp; INCLUSION</h4>
             <p>
               We design together with communities, elevating stakeholder-led leadership and voices of women, people of
@@ -96,7 +83,6 @@ function About() {
                 that embeds environmental and social impact across the enterprise.
               </li>
             </ul>
-
             <h4>ESG &amp; REGULATORY REPORTING</h4>
             <ul>
               <li>
@@ -106,21 +92,18 @@ function About() {
               <li>Conduct single or double materiality assessments and develop board-ready disclosures and metrics.</li>
               <li>Lead ESG ratings optimization, assurance planning, and audit preparation for public and private entities.</li>
             </ul>
-
             <h4>OPERATIONAL INFRASTRUCTURE &amp; COMPLIANCE</h4>
             <ul>
               <li>Strengthen financial and operational infrastructure through systems design, internal controls, and contract lifecycle management.</li>
               <li>Align business functions and systems with environmental, social, and governance principles and compliance standards (SOx, GAAP, IFRS, Sustainability regulations and standards).</li>
               <li>Support risk management, policy design, and cross-departmental accountability mechanisms.</li>
             </ul>
-
             <h4>STAKEHOLDER ENGAGEMENT &amp; COLLABORATIVE INITIATIVES</h4>
             <ul>
               <li>Facilitate stakeholder mapping, engagement strategy, and coalition development.</li>
               <li>Design and produce social impact events, learning labs, and participatory workshops.</li>
               <li>Build internal Green Teams, cross-sector task forces, and peer learning networks that foster ownership and momentum.</li>
             </ul>
-
             <h4>INTERIM EXECUTIVE LEADERSHIP &amp; CAPABILITY BUILDING</h4>
             <ul>
               <li>Provide interim sustainability, ESG controllership, or operational leadership during transitions, restructuring, or growth periods.</li>
@@ -154,7 +137,6 @@ return (
                         </div>
                 </div>
         </div>
-
         {/* Accordion */}
         <div className="about-accordion" role="list">
           {sections.map(({ id, title, content }) => {
@@ -180,7 +162,6 @@ return (
                     </button>
                   </h3>
                 </div>
-
                 <div
                   id={panelId}
                   className="accordion-panel"

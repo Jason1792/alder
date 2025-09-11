@@ -4,10 +4,7 @@
                         "path": "."
                 },
                 {
-                        "path": "../../shared_web"
-                },
-                {
-                        "path": "../alder_old"
+                        "path": "../../../Web/shared_web"
                 }
         ],
         "settings": {}
