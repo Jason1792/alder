@@ -207,9 +207,9 @@ h1 {
         z-index: 998;
         font-family: var(--font-heading);
         font-weight: var(--weight-bold);
-        font-size: 2.5rem;
+        font-size: 2rem;
         line-height: 1.25;
-        margin: 0;
+        margin: 0rem 0rem 1.5rem 0rem;
 }
 /* #region TEXT - HEADINGS - h1 */       
 
@@ -272,9 +272,9 @@ h2 {
         z-index: 998;
         font-family: var(--font-heading);
         font-weight: var(--weight-semi-bold);
-        font-size: 2rem;
+        font-size: 1.75rem;
         line-height: 1.25;
-        margin: 0rem 0rem .5rem 0rem;
+        margin: 0rem 0rem 1.4rem 0rem;
 }
 /* #region TEXT - HEADINGS - h2 */       
 @media (min-width: 601px) and (max-width: 1024px) {
@@ -334,9 +334,9 @@ h3 {
         z-index: 998;
         font-family: var(--font-heading);
         font-weight: var(--weight-semi-bold);
-        font-size: 1.66rem;
+        font-size: 1.5rem;
         line-height: 1.25;
-        margin: 0rem 0rem .5rem 0rem;
+        margin: 0 0 1.3rem 0;
 }
 /* #region TEXT - HEADINGS - h3 */       
 @media (min-width: 601px) and (max-width: 1024px) {
@@ -355,9 +355,9 @@ h4 {
         z-index: 998;
         font-family: var(--font-heading);
         font-weight: var(--weight-semi-bold);
-        font-size: 1.33rem;
+        font-size: 1.25rem;
         line-height: 1.25;
-        margin: 0rem 0rem .5rem 0rem;
+        margin: 0rem 0rem 1.2rem 0rem;
 }
 /* #region TEXT - HEADINGS - h4 */       
 @media (min-width: 601px) and (max-width: 1024px) {
@@ -376,8 +376,8 @@ h4 {
 p { /* checked */
         z-index: 998;
         font-size: 1rem;
-        line-height: 1.5;
-        margin: 0rem 0rem 1.5rem 0rem;
+        line-height: 1.6;
+        margin: 0rem 0rem 1.2rem 0rem;
 }
 /* #region TEXT - PARA & LISTS */       
 @media (min-width: 601px) and (max-width: 1024px) {
@@ -418,13 +418,9 @@ p { /* checked */
         opacity: 1;
 }
 }
-
-
-
 ul {
         opacity: 1;
-        margin-top: .5rem;
-        margin-bottom: 2rem;
+        margin: 0rem 0rem 2rem 0rem;
 }
 @media (min-width: 601px) and (max-width: 1024px) {
 ul {
@@ -433,6 +429,20 @@ ul {
 }
 @media (max-width: 600px) {
 ul {
+        opacity: 1;
+}
+}
+li {
+        opacity: 1;
+        margin: 0rem 0rem .6rem 0rem;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+li {
+        opacity: 1;
+}
+}
+@media (max-width: 600px) {
+li {
         opacity: 1;
 }
 }
