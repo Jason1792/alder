@@ -329,6 +329,7 @@ h2 {
 @media (max-width: 600px) {
 #fnp {
         opacity: 1;
+        margin-bottom: 1.25rem;
 }
 }
 /* #endregion TEXT - HEADINGS - h2 */       
