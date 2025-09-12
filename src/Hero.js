@@ -11,7 +11,7 @@ const Hero = forwardRef((props, ref) => (
                 <div className="hero-text-and-buttons">
                         <div className="hero-text">
                                 <h2 id="vrd">VERONICA RAMOS DULLACK</h2>
-                                <h2 id="fnp">20250911 1918</h2>
+                                <h2 id="fnp">20250911 1921</h2>
                                 <p>Alder Advisory envisions an ethical economy where organizations of all sizes have strategic clarity, operational strength, and leadership capacity to create positive and enduring environmental, social, and economic impact. </p>
                         </div>
                         <div className="hero-buttons-cont">   
