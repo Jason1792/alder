@@ -633,6 +633,11 @@ li {
 @media (max-width: 600px) {
 .modal-field_02 {
         opacity: 1;
+        font-size: 2.5rem;
+        margin-top: .35rem;    
+        margin-bottom: 2.5rem;
+        line-height: 5rem;
+        text-transform: uppercase;
 }
 }
 .modal-field_03 {
