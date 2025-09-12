@@ -1,5 +1,6 @@
 import "./App.css";
 import Header from "./Header";
+import SampleText from "./SampleText";
 import Hero from "./Hero";
 import About from "./About";
 import CaseStudies from "./CaseStudies";
@@ -45,6 +46,7 @@ export default function App() {
   return (
     <div className={scrolled ? "app scrolled" : "app"}>
       <Header ref={headerRef} />
+      <SampleText />
       <Hero ref={heroRef} />
       <About />
       <CaseStudies />

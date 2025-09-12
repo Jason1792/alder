@@ -80,7 +80,7 @@ button.button-style {
                 rgba(var(--alder_2_alpha),.2)), 
                 rgb(63, 63, 63);
         --header-inner: none;
-        --text-highlight-alder: rgba(var(--alder_1_alpha),1);
+        --sample-text-outer: hotpink;     --text-highlight-alder: rgba(var(--alder_1_alpha),1);
         --text-highlight-advisory: rgba(255,255,255,.75);
         --text-highlight-llc: rgba(255,255,255,.5);
         --header-buttons: none;
@@ -316,7 +316,7 @@ h2 {
 }
 #fnp {
         opacity: 1;
-        margin-top: -.25rem;
+        margin-top: -1.5rem;
         margin-bottom: 1.5rem;
 }
 @media (min-width: 601px) and (max-width: 1024px) {
@@ -347,7 +347,6 @@ h3 {
 @media (max-width: 600px) {
 h3 {
         z-index: 998;
-        margin: 0;
 }
 }
 /* #endregion TEXT - HEADINGS - h3 */       
@@ -370,7 +369,27 @@ h4 {
         z-index: 998;
 }
 }
-/* #endregion TEXT - HEADINGS - h4 */       
+.about-outer h4 {
+        z-index: 998;
+        font-family: var(--font-heading);
+        font-weight: var(--weight-semi-bold);
+        font-size: 1.25rem;
+        line-height: 1.25;
+        margin: 0rem 0rem .5rem 0rem;
+        /*
+        color: hotpink;
+        */
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+h4 {
+        z-index: 998;
+}
+}
+@media (max-width: 600px) {
+h4 {
+        z-index: 998;
+}
+}/* #endregion TEXT - HEADINGS - h4 */       
 /* #endregion TEXT - HEADINGS */       
 /* #region TEXT - PARA & LISTS */       
 p { /* checked */
@@ -391,7 +410,7 @@ p { /* checked */
 }
 }
 .hero-inner p { /* checked */
-        font-size: 1.75rem;
+        font-size: 1.5rem;
 }
 @media (min-width: 601px) and (max-width: 1024px) {
 .hero-inner p { /* checked */
@@ -400,6 +419,19 @@ p { /* checked */
 }
 @media (max-width: 600px) {
 .hero-inner p { /* checked */
+        z-index: 998;
+}
+}
+.about-outer p { 
+        margin: 0rem 0rem 2rem 0rem;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.about-outer p { 
+        z-index: 998;
+}
+}
+@media (max-width: 600px) {
+.about-outer p { 
         z-index: 998;
 }
 }
