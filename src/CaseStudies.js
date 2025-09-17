@@ -11,7 +11,8 @@ export default function CaseStudies({
   const [selectedIndex, setSelectedIndex] = useState(null);
   const [loading, setLoading] = useState(true);
   const [errorMsg, setErrorMsg] = useState("");
-
+  // Headline-level accordion state
+  const [outerOpen, setOuterOpen] = useState(false);
   useEffect(() => {
     const ac = new AbortController();
     setLoading(true);
@@ -41,8 +42,19 @@ export default function CaseStudies({
     <>
       <section className="case-studies-outer">
         <div className="case-studies-inner inner">
-          <h2>CASE STUDIES</h2>
-
+          <h2>
+                <button
+              type="button"
+              className="accordion-button"
+              aria-expanded={outerOpen}
+              aria-controls="case-studies-panel"
+              onClick={() => setOuterOpen((o) => !o)}
+            >
+              <span className="accordion-button-label">CASE STUDIES</span>
+              <i className="bi bi-chevron-right accordion-button-icon" aria-hidden="true" />
+            </button>
+        </h2>
+          <div id="case-studies-panel" hidden={!outerOpen}>
           {loading ? (
             <div className="no-results">
               <p>Loading...</p>
@@ -72,6 +84,7 @@ export default function CaseStudies({
               <p>No results.</p>
             </div>
           )}
+          </div>
         </div>
       </section>
 

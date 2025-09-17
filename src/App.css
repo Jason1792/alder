@@ -1,23 +1,9 @@
 html, body, #root {
-  background: var(--body-background);
-  height: 100%;
-  margin: 0;
-  padding: 0;
+        background: var(--body-background);
+        padding: 0;
 }
 .App {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-.no-results {
-        background-color: var(--no-results-bg);
-        min-height: 40vh;
-        display: grid;
-        place-items: center;
-        text-align: center;
-        opacity: .85;
-}
-.no-results p {
-        color: var(--no-results-text);
-        font-weight: var(--weight-semi-bold);
+        background-color: black;
+        display: flex;
+        flex-direction: column;
 }

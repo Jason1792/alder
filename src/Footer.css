@@ -1,5 +1,30 @@
 footer {
-        background-color: var(--footer); 
+        z-index: 1000;
+        padding: 12px;
+        box-sizing: border-box;   /* height includes padding/border */
+
+
+
+
+        /* 
+        display: none;
+        */
+
+        opacity: 1;
+
+
+
+        /* 
+        opacity: 0%;
+        */
+        background: var(--footer);
+        position: fixed; 
+        left: 0;
+        right: 0;
+        bottom: 0;/*
+        height: 100px;
+        */
+        height: var(--footer-height); 
 }
 @media (min-width: 601px) and (max-width: 1024px) {
 footer {
@@ -9,6 +34,7 @@ footer {
 @media (max-width: 600px) {
 footer {
         z-index: 998;
+        position: ; 
 }
 }
 .footer-inner {
@@ -23,13 +49,11 @@ footer {
 @media (min-width: 601px) and (max-width: 1024px) {
 .footer-inner {
         z-index: 998;
-        padding: .4rem 1rem;
 }
 }
 @media (max-width: 600px) {
 .footer-inner {
         z-index: 998;
-        padding: .25rem 1rem;
 }
 }
 .footer-left {

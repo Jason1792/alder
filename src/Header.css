@@ -1,4 +1,15 @@
 header {
+
+        /* 
+        display: none;
+        */
+
+
+
+
+        /* 
+        opacity: 0%;
+        */
         z-index: 999;
         background: var(--header-outer); 
         top: 0;
@@ -7,14 +18,7 @@ header {
         padding: 4px 12px;
         border: none;
         position: sticky;
-} 
-
-/* 
-add these back into header above
-        position: fixed;
-        width: 100%; 
-*/
-
+}
 @media (min-width: 601px) and (max-width: 1024px) {
 header {
         z-index: 999;
@@ -26,113 +30,63 @@ header {
 }
 }
 .header-inner {
+        z-index: 1000;
         background-color: var(--header-inner); 
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
         gap: .8rem;
-        max-width: 1000px;        
+        max-width: 1000px;    
+        height: 50px;    
         margin: 0 auto;
-        padding: .4rem 0;
+        padding: .16rem 0 .4rem 0;
         box-sizing: border-box;
         border-radius: 0;
         border: 0;
 } 
 @media (min-width: 601px) and (max-width: 1024px) {
 .header-inner {
-        z-index: 998;
+        z-index: 1000;
+        height: 44px;    
 }
 }
 @media (max-width: 600px) {
 .header-inner {
-        z-index: 998;
-        padding: .5rem 0;
+        z-index: 1000;
+        height: 40px;    
 }
 }
 .header-buttons {
-        z-index: 998;
+        z-index: 1000;
         background-color: var(--header-buttons); 
+        margin: 0;
         padding: 0;
         box-sizing: border-box;
         border-radius: 0rem;
-        border-top: none;
-        display: none;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: .8rem;
-        flex: 0 0 auto;
-        width: 25vw;
-        margin: .12rem 0 0 0;
-}
-.app.scrolled .header-buttons {
-        opacity: 1;
-        z-index: 999;
-        background-color: var(--header-buttons); 
-        padding: 0;
-        box-sizing: border-box;
-        border-radius: 0rem;
-        border-top: none;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
-        gap: .8rem;
+        gap: .3rem;
         flex: 0 0 auto;
-        width: 25vw;
+        width: 9vw;
+        transition: opacity 0.4s ease;
 }
-.header-buttons .button-style {
-        padding: .35rem 0 .45rem 0;
-}
+
 @media (min-width: 601px) and (max-width: 1024px) {
 .header-buttons {
-        z-index: 999;
-        width: 40vw;
-        display: none;
-        gap: .3rem;
-        margin: 10px 0 0 0;
-}
-.app.scrolled .header-buttons {
-        background-color: var(--header-buttons); 
-        padding: 0;
-        box-sizing: border-box;
-        border-radius: 0rem;
-        border-top: none;
-        width: 40vw;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        flex: 0 0 auto;
-        margin: 0;
-}
-.header-buttons .button-style {
-        padding: .35rem 0;
+        z-index: 1000;
+        margin: .1rem 0 0 0;
+        width: 15vw;
 }
 }
 @media (max-width: 600px) {
 .header-buttons {
-        z-index: 999;
-        display: none;
-}
-.app.scrolled .header-buttons {
-        background-color: var(--header-buttons); 
-        padding: 0;
-        box-sizing: border-box;
-        border-radius: 0rem;
-        border-top: none;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        flex: 0 0 auto;
-        width: 30vw;
-        gap: .3rem;
-        margin: .05rem 0 0 0;
-}
-.header-buttons .button-style {
-        padding: .23rem 0;
+        z-index: 1000;
+        margin: .1rem 0 0 0;
+        gap: .4rem;
+        width: 16vw;
 }
 .call {
         display: none;

@@ -1,6 +1,18 @@
 .hero-outer {
         z-index: 998;
-        background-color: var(--hero-outer); 
+        background-color: var(--outer-no-bg);
+        padding-bottom: 0; 
+        
+        
+        /*
+        display: block; 
+        */
+        display: block; 
+        
+        
+        /*
+        display: none; 
+        */
 }
 @media (min-width: 601px) and (max-width: 1024px) {
 .hero-outer {
@@ -40,7 +52,7 @@
         z-index: 998;
         background-color: var(--hero-image); 
         display: inline-block;
-        flex: 1 1 33.3%;
+        flex: 1 1 25%;
         text-align: center;
         padding: 0;
         margin: 0;
@@ -86,7 +98,7 @@
 }
 .hero-text-and-buttons {
         z-index: 998;
-        flex: 1 1 66%;
+        flex: 1 1 75%;
         padding: 1rem;
         background-color: var(--hero-text-and-buttons); 
         display: flex;

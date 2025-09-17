@@ -4,12 +4,12 @@ import WBE from "./assets/WBE-Large.png";
 function Footer() {
   return (
 <footer>
-        <div class="footer-inner inner">
-                <div class="footer-left">
+        <div className="footer-inner inner">
+                <div className="footer-left">
                         <a 
                         href="https://www.linkedin.com/in/vdullack" 
                         aria-label="LinkedIn" 
-                        class="social-icon" 
+                        className="social-icon" 
                         target="_blank" 
                         rel="noopener">
                                 <svg 
@@ -23,7 +23,7 @@ function Footer() {
                         <a 
                         href="https://veronicaramosdullack.substack.com/?r=40le2r&utm_campaign=pub-share-checklist" 
                         aria-label="Substack" 
-                        class="social-icon" 
+                        className="social-icon" 
                         target="_blank" 
                         rel="noopener">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -32,7 +32,7 @@ function Footer() {
                         <a 
                         href="https://www.oregon.gov/biz/programs/cobid/mbe-wbe/pages/default.aspx" 
                         aria-label="Minority Business Enterprise" 
-                        class="social-icon" 
+                        className="social-icon" 
                         target="_blank" 
                         rel="noopener">
                                 <img src={MBE} />
@@ -40,14 +40,14 @@ function Footer() {
                         <a 
                         href="https://www.oregon.gov/biz/programs/cobid/mbe-wbe/pages/default.aspx" 
                         aria-label="Women Business Enterprise" 
-                        class="social-icon" 
+                        className="social-icon" 
                         target="_blank" 
                         rel="noopener">
                                 <img src={WBE} />
                         </a>
                 </div>
-                <div class="footer-right">
-                        <p class="p-small">&copy; 2025 Alder Advisory LLC</p>
+                <div className="footer-right">
+                        <p className="p-small">&copy; 2025 Alder Advisory LLC</p>
                 </div>
         </div>
 

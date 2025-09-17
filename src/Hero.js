@@ -14,14 +14,6 @@ const Hero = forwardRef((props, ref) => (
                                 <h2 id="fnp">20250912 1230</h2>
                                 <p>Alder Advisory envisions an ethical economy where organizations of all sizes have strategic clarity, operational strength, and leadership capacity to create positive and enduring environmental, social, and economic impact. </p>
                         </div>
-                        <div className="hero-buttons-cont">   
-                                <div className="button-wrapper">
-                                        <a href="mailto:veronica@alderadvisoryllc.com?subject=Inquiry from Alder Advisory Website" target="_blank" className="button-style button-text">Email</a>
-                                </div>                        
-                                <div className="button-wrapper">
-                                        <a href="https://calendar.app.google/5EDhxjGqzWvPtdQLA" target="_blank" className="button-style button-text">Schedule a call</a>
-                                </div>                          
-                        </div>
                 </div>
         </div>
 </section>

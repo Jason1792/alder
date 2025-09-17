@@ -2,9 +2,10 @@ import { useState, useMemo } from "react";
 import "./About.css";
 
 function About() {
-  // Track open panels by id (Set allows multiple open)
+  // Track inner (nested) panels by id (Set allows multiple open)
   const [openIds, setOpenIds] = useState(new Set());
-
+  // Top-level (headline) accordion state
+  const [outerOpen, setOuterOpen] = useState(false);
   // Helper: toggle a single id
   const toggle = (id) => {
     setOpenIds((prev) => {
@@ -13,10 +14,6 @@ function About() {
       return next;
     });
   };
-
-  // Expand/collapse all
-  const expandAll = () => setOpenIds(new Set(["mission", "values", "core-services"]));
-  const collapseAll = () => setOpenIds(new Set());
 
   // Sections (h3-level)
   const sections = useMemo(
@@ -116,33 +113,50 @@ function About() {
     ],
     []
   );
-
+const handleOuterToggle = () => {
+  setOuterOpen((prev) => {
+    if (prev === true) {
+      // if we’re about to close, clear nested panels
+      setOpenIds(new Set());
+    }
+    return !prev; // toggle open/closed
+  });
+};
 // Render
 return (
 <section className="about-outer">
 <div className="about-inner inner">
+
+        {/* Headline-level accordion (outer) */}
         <div className="about-title-and-buttons-cont">  
-                <h2 className="about-title">ABOUT</h2>
-                <div className="about-buttons">
-                {/* Controls */}
-                        <div className="about-btn-wrap">
-                                <button type="button" className="button-style button-text about-button" onClick={expandAll}>
-                                        Expand all
-                                </button>
-                        </div>
-                        <div className="about-btn-wrap">
-                                <button type="button" className="button-style button-text  about-button" onClick={collapseAll}>
-                                        Collapse all
-                                </button>
-                        </div>
-                </div>
+          <h2 className="about-title">
+            <button
+              type="button"
+              className="accordion-button"
+              aria-expanded={outerOpen}
+              aria-controls="about-outer-panel"
+                onClick={handleOuterToggle}
+            >
+              <span className="accordion-button-label">ABOUT</span>
+              <i className="bi bi-chevron-right accordion-button-icon" aria-hidden="true" />
+            </button>
+          </h2>
         </div>
-        {/* Accordion */}
-        <div className="about-accordion" role="list">
+        {/* Nested accordion list (inner) */}
+        <div
+          id="about-outer-panel"
+          className="about-accordion"
+          role="list"
+          hidden={!outerOpen}
+                aria-hidden={!outerOpen}
+          style={outerOpen ? undefined : { display: "none" }}        >
           {sections.map(({ id, title, content }) => {
             const isOpen = openIds.has(id);
             const buttonId = `acc-btn-${id}`;
             const panelId = `acc-panel-${id}`;
+
+            
+
 
             return (
               <div key={id} className="accordion-item" role="listitem">
