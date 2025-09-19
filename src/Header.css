@@ -1,32 +1,26 @@
 header {
-
-        /* 
-        display: none;
-        */
-
-
-
-
-        /* 
-        opacity: 0%;
-        */
-        z-index: 999;
-        background: var(--header-outer); 
+        z-index: 1000;
+        background: var(--header-outer);
+        height: 56px; 
         top: 0;
         left: 0;
+        right: 0;
         margin: 0;
-        padding: 4px 12px;
+        padding: 3px 0;
         border: none;
-        position: sticky;
+        position: fixed;
+        box-sizing: border-box;
 }
 @media (min-width: 601px) and (max-width: 1024px) {
 header {
         z-index: 999;
+        height: 51px; 
 }
 }
 @media (max-width: 600px) {
 header {
         z-index: 999;
+        height: 45px; 
 }
 }
 .header-inner {
@@ -36,11 +30,10 @@ header {
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
-        gap: .8rem;
+        gap: 0;
         max-width: 1000px;    
-        height: 50px;    
         margin: 0 auto;
-        padding: .16rem 0 .4rem 0;
+        padding: 3px 0 0 0;
         box-sizing: border-box;
         border-radius: 0;
         border: 0;
@@ -48,13 +41,13 @@ header {
 @media (min-width: 601px) and (max-width: 1024px) {
 .header-inner {
         z-index: 1000;
-        height: 44px;    
+        padding: 3px 1rem 0 1rem;
 }
 }
 @media (max-width: 600px) {
 .header-inner {
         z-index: 1000;
-        height: 40px;    
+        padding: 3px 1rem 0 1rem;
 }
 }
 .header-buttons {
@@ -66,11 +59,11 @@ header {
         border-radius: 0rem;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: flex-end;
         align-items: flex-start;
-        gap: .3rem;
+        gap: 2rem;
         flex: 0 0 auto;
-        width: 9vw;
+        width: 6vw;
         transition: opacity 0.4s ease;
 }
 
@@ -78,15 +71,15 @@ header {
 .header-buttons {
         z-index: 1000;
         margin: .1rem 0 0 0;
-        width: 15vw;
+        width: 10vw;
 }
 }
 @media (max-width: 600px) {
 .header-buttons {
         z-index: 1000;
         margin: .1rem 0 0 0;
-        gap: .4rem;
-        width: 16vw;
+        gap: 1.5rem;
+        width: 10vw;
 }
 .call {
         display: none;

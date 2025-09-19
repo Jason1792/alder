@@ -11,6 +11,9 @@
 @media (max-width: 600px) {
 .about-outer {
         z-index: 998;
+        margin: 2px 0;
+
+        padding: 0;
 }
 }
 .about-inner {
@@ -83,15 +86,17 @@ flex: 1 1 100%;
 }
 
 /* --- Accordion structure --- */
-.about-accordion { /* 1 acc'd item, e.g., mission */
+.about-accordion { /* all 3 acc'd items as a set */
   display: grid;
-  gap: 0.75rem;
-  padding: 0 1rem;
+  gap: 0.35rem;
+  padding: .5rem 1rem 1rem 1rem;
+  background-color: var(--about-accordion);
 }
+/*
 .about-accordion .accordion-item:last-child {
   margin-bottom: 1rem;
 }
-
+*/
 .accordion-item { /* contents OF acc'd item */
   border: 1px solid var(--border);
   border-radius: .4rem;
@@ -113,7 +118,7 @@ flex: 1 1 100%;
   gap: .5rem;
   width: 100%;
   box-sizing: border-box;
-  padding: .75rem 1rem;
+  padding: .5rem 1rem;
 }
 
 .accordion-button:focus-visible {

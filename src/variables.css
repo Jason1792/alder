@@ -1,6 +1,22 @@
 /* #region HTML, ROOT, BODY */       
+body {
+        padding-top: 56px;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+body {
+        opacity: 1;
+        padding-top: 52px;
+}
+}
+@media (max-width: 600px) {
+body {
+        opacity: 1;
+        padding-top: 45px;
+}
+}
+
 :root { 
-        --footer-height: 70px; 
+        --footer-height: 42px; 
 }
 @media (min-width: 601px) and (max-width: 1024px) {
 :root { 
@@ -9,7 +25,6 @@
 }
 @media (max-width: 600px) {
 :root { 
-        --footer-height: 47px; 
         opacity: 1;
 }
 }
@@ -73,9 +88,10 @@ button.button-style {
 
 /* #region COLORS */      
 :root, :root[data-theme='actual'] {
-        --body: rgba(var(--alder_2_alpha),.3);
+        --body: rgba(var(--alder_2_alpha),.2);
         --body-text: rgba(var(--alder_2_alpha),.85);
-        --faint: rgba(var(--alder_2_alpha),.6);        --button: rgba(var(--alder_1_alpha),1);
+        --faint: rgba(var(--alder_2_alpha),.6);        
+        --button: rgba(var(--alder_1_alpha),1);
         --button-hover: rgba(var(--alder_3_alpha),1);
         --button-no-bg: rgba(var(--alder_1_alpha),0);
         --button-no-bg-hover: rgba(255,255,255,0);
@@ -91,7 +107,7 @@ button.button-style {
                 linear-gradient(
                 rgba(var(--alder_2_alpha),.2),
                 rgba(var(--alder_2_alpha),.2)), 
-                rgb(63, 63, 63);
+                hsl(0, 0%, 40%); /* 100=white */
         --header-inner: none;
         --sample-text-outer: hotpink;     
         --text-highlight-alder: rgba(var(--alder_1_alpha),1);
@@ -123,11 +139,13 @@ button.button-style {
         --modal-text: rgba(255, 255, 255, 0);        --about-title-and-buttons-cont: none;
         --about-buttons: none;
         --about-btn-wrap: none;
+        --about-accordion: none;
+        --footer-inner: none;
         --footer: 
                 linear-gradient(
                 rgba(var(--alder_2_alpha),.2),
                 rgba(var(--alder_2_alpha),.2)), 
-                rgb(63, 63, 63);        
+                hsl(0, 0%,80%); /* 100=white */
         --footer-tablet: none;
         --footer-left: none;
 }
@@ -154,6 +172,11 @@ button.button-style {
         --hero-buttons: orange;
         --button-wrapper: white;
         --hero-image: white;
+        --about-outer: black;
+        --about-accordion: red;
+        --about-title-and-buttons-cont: gold;
+        --about-buttons: rgb(93, 190, 93);
+        --about-btn-wrap: magenta;
         --case-studies-outer: lightgreen;
         --case-studies-inner: white;
         --case-studies-grid: blue;
@@ -168,11 +191,8 @@ button.button-style {
         --modal-back-and-forward: rgba(255, 255, 255, 0);
         --modal-close: rgba(111, 41, 152, 0.866);
         --modal-text: rgba(154, 207, 154, 0.85);
-        --about-outer: black;
-        --about-title-and-buttons-cont: gold;
-        --about-buttons: rgb(93, 190, 93);
-        --about-btn-wrap: magenta;
-        --footer: blue;
+        --footer: black;
+        --footer-inner: magenta;
         --footer-left: salmon;
 }
 :root { /* CHANGE THESE ONLY FROM MASTER BRANDING */
@@ -229,22 +249,22 @@ h1 {
         z-index: 998;
         font-family: var(--font-heading);
         font-weight: var(--weight-bold);
-        font-size: 2.5rem;
+        font-size: 2.125rem;
         line-height: 1.25;
-        margin: 0rem 0rem 1.25rem 0rem;
+        margin: 0rem 0rem 1.2rem 0rem;
         text-transform: uppercase;
 }
 /* #region TEXT - HEADINGS - h1 */       
 @media (min-width: 601px) and (max-width: 1024px) {
 h1 {
         z-index: 998;
-        font-size: 2.25rem;
+        font-size: 2rem;
 }
 }
 @media (max-width: 600px) {
 h1 {
         z-index: 998;
-        font-size: 2rem;
+        font-size: 1.875rem;
 }
 }
 header h1 {
@@ -300,9 +320,9 @@ h2 {
         z-index: 998;
         font-family: var(--font-heading);
         font-weight: var(--weight-semi-bold);
-        font-size: 2rem;
+        font-size: 1.875rem;
         line-height: 1.25;
-        margin: 0rem 0rem 1.4rem 0rem;
+        margin: 0rem 0rem 1.15rem 0rem;
         text-transform: uppercase;
 }
 /* #region TEXT - HEADINGS - h2 */       
@@ -315,11 +335,11 @@ h2 {
 @media (max-width: 600px) {
 h2 {
         z-index: 998;
-        font-size: 1.5rem;
+        font-size: 1.625rem;
 }
 }
 .hero-text h2 {
-        font-size: 2.25rem;
+        font-size: 2.125rem;
 }
 @media (min-width: 601px) and (max-width: 1024px) {
 .hero-text h2 {
@@ -330,7 +350,7 @@ h2 {
 @media (max-width: 600px) {
 .hero-text h2 {
         opacity: 1;
-        font-size: 1.75rem;
+        font-size: 1.875rem;
 }
 }
 #vrd {
@@ -349,7 +369,7 @@ h2 {
 }
 #fnp {
         opacity: 1;
-        margin-top: -1.5rem;
+        margin-top: -1rem;
         margin-bottom: 1rem;
 }
 @media (min-width: 601px) and (max-width: 1024px) {
@@ -395,16 +415,16 @@ h3 {
         z-index: 998;
         font-family: var(--font-heading);
         font-weight: var(--weight-semi-bold);
-        font-size: 1.75rem;
+        font-size: 1.625rem;
         line-height: 1.25;
-        margin: 0 0 1.3rem 0;
+        margin: 0 0 1.1rem 0;
         text-transform: uppercase;
 }
 /* #region TEXT - HEADINGS - h3 */       
 @media (min-width: 601px) and (max-width: 1024px) {
 h3 {
         z-index: 998;
-        font-size: 1.56rem;
+        font-size: 1.5rem;
 }
 }
 @media (max-width: 600px) {
@@ -431,21 +451,21 @@ h4 {
         z-index: 998;
         font-family: var(--font-heading);
         font-weight: var(--weight-semi-bold);
-        font-size: 1.5rem;
+        font-size: 1.375rem;
         line-height: 1.25;
-        margin: 0rem 0rem 1.2rem 0rem;
+        margin: 0rem 0rem 1.05rem 0rem;
 }
 /* #region TEXT - HEADINGS - h4 */       
 @media (min-width: 601px) and (max-width: 1024px) {
 h4 {
         z-index: 998;
-        font-size: 1.375rem;
+        font-size: 1.25rem;
 }
 }
 @media (max-width: 600px) {
 h4 {
         z-index: 998;
-        font-size: 1.25rem;
+        font-size: 1.125rem;
 }
 }
 .about-outer h4 {
@@ -470,7 +490,7 @@ p {
         z-index: 998;
         font-size: 1rem;
         line-height: 1.5;
-        margin: 0rem 0rem 1.2rem 0rem;
+        margin: 0rem 0rem 1rem 0rem;
 }
 /* #region TEXT - PARA & LISTS */       
 @media (min-width: 601px) and (max-width: 1024px) {
@@ -485,7 +505,7 @@ p {
 }
 .hero-inner p { 
         z-index: 998;
-        font-size: 1.5rem;
+        font-size: 1.375rem;
 }
 @media (min-width: 601px) and (max-width: 1024px) {
 .hero-inner p { 
@@ -496,7 +516,7 @@ p {
 @media (max-width: 600px) {
 .hero-inner p { 
         z-index: 998;
-        font-size: 1.25rem;
+        font-size: 1.125rem;
 }
 }
 .about-outer p { 
@@ -515,7 +535,7 @@ p {
 .p-small { 
         z-index: 998;
         font-size: .875rem;
-        line-height: 1.25;
+        line-height: 1.37;
         margin: 0rem 0rem 1rem 0rem;
 }
 @media (min-width: 601px) and (max-width: 1024px) {
@@ -665,7 +685,6 @@ li {
 .card-field_06 {
         opacity: 1;
         display: none;
-        font-size: 1.0rem;
 }
 @media (min-width: 601px) and (max-width: 1024px) {
 .card-field_06 {
@@ -680,7 +699,6 @@ li {
 .card-field_07 {
         opacity: 1;
         display: none;
-        font-size: 1.0rem;
 }
 @media (min-width: 601px) and (max-width: 1024px) {
 .card-field_07 {
@@ -785,18 +803,18 @@ section {
         border: none;
 }
 @media (min-width: 601px) and (max-width: 1024px) {
-section, footer {
+section {
         z-index: 998;
 }
 }
 @media (max-width: 600px) {
 section {
         z-index: 998;
-        padding: 7px 0;
+        padding: 0;
 }
 footer {
         opacity: 1;
-        padding: 0;
+        padding: 5px 0 0 0;
 }
 }
 .inner {

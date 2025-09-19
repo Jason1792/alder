@@ -4,7 +4,7 @@ import WBE from "./assets/WBE-Large.png";
 function Footer() {
   return (
 <footer>
-        <div className="footer-inner inner">
+        <div className="footer-inner">
                 <div className="footer-left">
                         <a 
                         href="https://www.linkedin.com/in/vdullack" 
