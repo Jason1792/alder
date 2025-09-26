@@ -11,7 +11,7 @@ body {
 @media (max-width: 600px) {
 body {
         opacity: 1;
-        padding-top: 45px;
+        padding-top: 44px;
 }
 }
 
@@ -108,6 +108,16 @@ button.button-style {
                 rgba(var(--alder_2_alpha),.2),
                 rgba(var(--alder_2_alpha),.2)), 
                 hsl(0, 0%, 40%); /* 100=white */
+        --header-outer-test-tablet:
+                linear-gradient(
+                rgba(var(--alder_2_alpha),.2),
+                rgba(var(--alder_2_alpha),.2)), 
+                hsl(0, 0%, 40%); /* 100=white */
+        --header-outer-test-cell:
+                linear-gradient(
+                rgba(var(--alder_2_alpha),.2),
+                rgba(var(--alder_2_alpha),.2)), 
+                hsl(0, 0%, 40%); /* 100=white */ 
         --header-inner: none;
         --sample-text-outer: hotpink;     
         --text-highlight-alder: rgba(var(--alder_1_alpha),1);
@@ -161,6 +171,8 @@ button.button-style {
         --border: none;
         --inner-default: yellow;
         --header-outer: lightgreen;
+        --header-outer-test-tablet: pink;
+        --header-outer-test-cell: lightgreen;        
         --header-inner: rgb(70, 138, 110);
         --text-highlight-alder: green;
         --text-highlight-advisory: orange;
@@ -511,6 +523,8 @@ p {
 .hero-inner p { 
         z-index: 998;
         font-size: 1.25rem;
+        line-height: 1.4;
+        margin: 0rem 0rem .75rem 0rem;
 }
 }
 @media (max-width: 600px) {

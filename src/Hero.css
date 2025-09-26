@@ -59,8 +59,11 @@
 }
 @media (min-width: 601px) and (max-width: 1024px) {
 .hero-image {
-        z-index: 998;/*
-        flex: 1 1 50%;  THIS */
+        z-index: 998;
+        padding: 1rem .35rem 1rem 1rem;
+        /*
+        flex: 1 1 33.33%;
+        */
 }
 }
 @media (max-width: 600px) {
@@ -77,6 +80,17 @@
         padding: 0;
         margin: 0;
 }
+@media (min-width: 601px) and (max-width: 1024px) {
+.hero-image img {
+        opacity: 1;
+        border-radius: .3rem;
+}
+}
+@media (max-width: 600px) {
+.hero-image img {
+        opacity: 1;
+}
+}
 .hero-image-bg {
         display: none;
 }
@@ -86,6 +100,7 @@
 }
 }
 @media (max-width: 600px) {
+/*
 .hero-image-bg {
         z-index: 998;
         background-image: url(assets/202304-Alaska-0849.jpg); 
@@ -94,6 +109,18 @@
         height: 35vw;
         background-position: calc(50% + 15px) calc(50% + 15px);
         background-size: 108%;
+}
+*/
+.hero-image-bg {
+        z-index: 998;
+        background-image: url(assets/alder_banner_03.jpg); 
+        flex: none;
+        display: block;
+        height: 29vw;
+        background-position: 
+        calc(50% + 0px) /* this does XXXXX */ 
+        calc(50% + 1.87vw); /* increasing the '+' moves image content down within image frame */
+        background-size: 100%;
 }
 }
 .hero-text-and-buttons {
@@ -108,6 +135,10 @@
 @media (min-width: 601px) and (max-width: 1024px) {
 .hero-text-and-buttons {
         z-index: 998;
+        padding: .75rem;
+        /*
+        flex: 1 1 66.66%;
+        */
 }
 }
 @media (max-width: 600px) {

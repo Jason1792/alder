@@ -14,13 +14,15 @@ header {
 @media (min-width: 601px) and (max-width: 1024px) {
 header {
         z-index: 999;
+        background: var(--header-outer-test-tablet);
         height: 51px; 
 }
 }
 @media (max-width: 600px) {
 header {
         z-index: 999;
-        height: 45px; 
+        background: var(--header-outer-test-cell);
+        height: 44px; 
 }
 }
 .header-inner {
@@ -41,13 +43,13 @@ header {
 @media (min-width: 601px) and (max-width: 1024px) {
 .header-inner {
         z-index: 1000;
-        padding: 3px 1rem 0 1rem;
+        padding: 3px .7rem 0 .8rem;
 }
 }
 @media (max-width: 600px) {
 .header-inner {
         z-index: 1000;
-        padding: 3px 1rem 0 1rem;
+        padding: 3px .7rem 0 .8rem;
 }
 }
 .header-buttons {

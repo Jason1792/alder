@@ -1,5 +1,5 @@
 footer {
-        z-index: 1000;
+        z-index: 999;
         padding-top: 5px;
         box-sizing: border-box;
         background: var(--footer); 
@@ -62,6 +62,7 @@ footer {
 @media (max-width: 600px) {
 .footer-left {
         z-index: 998;
+        gap: .5rem;
 }
 }
 .footer-right {
