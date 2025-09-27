@@ -88,7 +88,17 @@ button.button-style {
 
 /* #region BANNER_IMAGES */       
 
-:root, :root[data-theme-banner='banner-03'] {
+:root, :root[data-theme-banner='banner-01'] {
+        --banner_url: url(assets/alder_banner_01.jpg);        
+        --banner_height: 29vw;                
+        --banner_position: calc(50% + 0px) calc(50% + 1.87vw);
+}
+:root[data-theme-banner='banner-02'] {
+        --banner_url: url(assets/alder_banner_02.jpg);        
+        --banner_height: 29vw;                
+        --banner_position: calc(50% + 0px) calc(50% + 1.87vw);
+}
+:root[data-theme-banner='banner-03'] {
         --banner_url: url(assets/alder_banner_03.jpg);        
         --banner_height: 29vw;                
         --banner_position: calc(50% + 0px) calc(50% + 1.87vw);
@@ -108,7 +118,51 @@ button.button-style {
         --banner_height: 32vw;                
         --banner_position: calc(50% + 0px) calc(50% + 4.75vw);
 }
-
+:root[data-theme-banner='banner-07'] {
+        --banner_url: url(assets/alder_banner_07.jpg);        
+        --banner_height: 32vw;                
+        --banner_position: calc(50% + 0px) calc(50% + 4.75vw);
+}
+:root[data-theme-banner='banner-08'] {
+        --banner_url: url(assets/alder_banner_08.jpg);        
+        --banner_height: 30.5vw;                
+        --banner_position: calc(50% + 0px) calc(50% + 5.5vw);
+}
+:root[data-theme-banner='banner-09'] {
+        --banner_url: url(assets/alder_banner_09.jpg);        
+        --banner_height: 30.5vw;                
+        --banner_position: calc(50% + 0px) calc(50% + 5.5vw);
+}
+:root[data-theme-banner='banner-10'] {
+        --banner_url: url(assets/alder_banner_10.jpg);        
+        --banner_height: 29.25vw;                
+        --banner_position: calc(50% + 0px) calc(50% + 6.25vw);
+}
+:root[data-theme-banner='banner-11'] {
+        --banner_url: url(assets/alder_banner_11.jpg);        
+        --banner_height: 29.5vw;                
+        --banner_position: calc(50% + 0px) calc(50% + 6.125vw);
+}
+:root[data-theme-banner='banner-12'] {
+        --banner_url: url(assets/alder_banner_12.jpg);        
+        --banner_height: 29.5vw;                
+        --banner_position: calc(50% + 0px) calc(50% + 6.125vw);
+}
+:root[data-theme-banner='banner-13'] {
+        --banner_url: url(assets/alder_banner_13.jpg);        
+        --banner_height: 29.5vw;                
+        --banner_position: calc(50% + 0px) calc(50% + 6.125vw);
+}
+:root[data-theme-banner='banner-14'] {
+        --banner_url: url(assets/alder_banner_14.jpg);        
+        --banner_height: 36vw;                
+        --banner_position: calc(50% + 0px) calc(50% + 2.75vw);
+}
+:root[data-theme-banner='banner-15'] {
+        --banner_url: url(assets/alder_banner_15.jpg);        
+        --banner_height: 29vw;    
+        --banner_position: calc(50% + 0px) calc(50% + 1.875vw);
+}
 /* #endregion BANNER_IMAGES */       
 
 /* #region COLORS */      

@@ -2,7 +2,7 @@ import React, { forwardRef, useEffect, useState } from "react";
 import "./Hero.css";
 import headshot from "./assets/202405-Veronica-Headshot-005.jpg";
 
-const BANNERS = ["banner-03", "banner-04", "banner-05", "banner-06"];
+const BANNERS = ["banner-01", "banner-02", "banner-03", "banner-04", "banner-05", "banner-06", "banner-07", "banner-08", "banner-09", "banner-10", "banner-11", "banner-12", "banner-13", "banner-14", "banner-15"];
 
 const Hero = forwardRef((props, ref) => {
   // Initialize from existing attribute or localStorage, fallback to first
@@ -44,7 +44,7 @@ const Hero = forwardRef((props, ref) => {
         <div className="hero-text-and-buttons">
           <div className="hero-text">
             <h2 id="vrd">VERONICA RAMOS DULLACK</h2>
-            <h2 id="fnp">20250925 2205</h2>
+            <h2 id="fnp">FOUNDER & PRINCIPAL</h2>
             <p>
               Alder Advisory envisions an ethical economy where organizations of all sizes have
               strategic clarity, operational strength, and leadership capacity to create positive
