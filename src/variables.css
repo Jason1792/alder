@@ -86,9 +86,13 @@ button.button-style {
 }
 /* #endregion BUTTONS & ANCHORS */       
 
-/* #region BANNER_IMAGES */       
-
-:root, :root[data-theme-banner='banner-01'] {
+/* #region BANNER_IMAGES */    
+:root, :root[data-theme-banner='banner-16'] {
+        --banner_url: url(assets/alder_banner_16.jpg);        
+        --banner_height: 36.25vw;    
+        --banner_position: calc(50% + 0px) calc(50% - 3vw);
+}
+:root[data-theme-banner='banner-01'] {
         --banner_url: url(assets/alder_banner_01.jpg);        
         --banner_height: 29vw;                
         --banner_position: calc(50% + 0px) calc(50% + 1.87vw);
