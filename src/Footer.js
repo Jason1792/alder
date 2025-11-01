@@ -35,7 +35,7 @@ function Footer() {
                         className="social-icon" 
                         target="_blank" 
                         rel="noopener noreferrer">
-                                <img src={MBE} />
+                                <img src={MBE} alt="Minority Business Enterprise Logo"/>
                         </a>
                         <a 
                         href="https://www.oregon.gov/biz/programs/cobid/mbe-wbe/pages/default.aspx" 
@@ -43,7 +43,7 @@ function Footer() {
                         className="social-icon" 
                         target="_blank" 
                         rel="noopener noreferrer">
-                                <img src={WBE} />
+                                <img src={WBE}  alt="Women Business Enterprise Logo"/>
                         </a>
                 </div>
                 <div className="footer-right">

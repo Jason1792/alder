@@ -6,7 +6,6 @@ import "./CaseStudies.css";
 export default function CaseStudies({
   dataUrl = "https://script.google.com/macros/s/AKfycbwQzD1dkgPWq_pgNCH39zAZmMj5IeUdIRBbn_UYufarCEwH45PplxWrQQbOt8lBUEyt/exec",
 }) {
-  const [cards, setCards] = useState([]);
   const [filtered, setFiltered] = useState([]);
   const [selectedIndex, setSelectedIndex] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -24,7 +23,6 @@ export default function CaseStudies({
         return res.json();
       })
       .then((data) => {
-        setCards(data || []);
         setFiltered(data || []);
       })
       .catch((err) => {
