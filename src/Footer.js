@@ -9,9 +9,7 @@ function Footer() {
                         <a 
                         href="https://www.linkedin.com/in/vdullack" 
                         aria-label="LinkedIn" 
-                        className="social-icon" 
-                        target="_blank" 
-                        rel="noopener noreferrer">
+                        className="social-icon" >
                                 <svg 
                                 height="72" 
                                 viewBox="0 0 72 72" 
@@ -23,26 +21,20 @@ function Footer() {
                         <a 
                         href="https://veronicaramosdullack.substack.com/?r=40le2r&utm_campaign=pub-share-checklist" 
                         aria-label="Substack" 
-                        className="social-icon" 
-                        target="_blank" 
-                        rel="noopener noreferrer">
+                        className="social-icon" >
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                 <path fill="#ff6c1e" d="M22.539 8.242H1.46V5.406h21.08zM1.46 10.812V24L12 18.11L22.54 24V10.812zM22.54 0H1.46v2.836h21.08z"/></svg>
                         </a>
                         <a 
                         href="https://www.oregon.gov/biz/programs/cobid/mbe-wbe/pages/default.aspx" 
                         aria-label="Minority Business Enterprise" 
-                        className="social-icon" 
-                        target="_blank" 
-                        rel="noopener noreferrer">
+                        className="social-icon" >
                                 <img src={MBE} alt="Minority Business Enterprise Logo"/>
                         </a>
                         <a 
                         href="https://www.oregon.gov/biz/programs/cobid/mbe-wbe/pages/default.aspx" 
                         aria-label="Women Business Enterprise" 
-                        className="social-icon" 
-                        target="_blank" 
-                        rel="noopener noreferrer">
+                        className="social-icon" >
                                 <img src={WBE}  alt="Minority Business Enterprise Logo"/>
                         </a>
                 </div>
