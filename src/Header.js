@@ -13,10 +13,10 @@ const Header = forwardRef((props, ref) => (
                 </div>                           
                 <div className="header-buttons">
                         <div className="button-wrapper">
-                                <a href="mailto:veronica@alderadvisoryllc.com?subject=Inquiry from Alder Advisory Website" target="_blank" rel="no-referrer" className="button-style button-text"><i className="bi bi-envelope"></i></a>
+                                <a href="mailto:veronica@alderadvisoryllc.com?subject=Inquiry from Alder Advisory Website" className="button-style button-text"><i className="bi bi-envelope"></i></a>
                         </div>                        
                         <div className="button-wrapper">
-                                <a href="https://calendar.app.google/5EDhxjGqzWvPtdQLA" target="_blank" rel="no-referrer" className="button-style button-text"><i className="bi bi-calendar-event"></i></a>
+                                <a href="https://calendar.app.google/5EDhxjGqzWvPtdQLA" className="button-style button-text"><i className="bi bi-calendar-event"></i></a>
                         </div>   
                 </div>
         </div>
